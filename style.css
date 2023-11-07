@@ -1,0 +1,211 @@
+body {
+    margin: 0px; /* 전체 페이지상 하얀 여백 제거 */
+    font-family: Circular,spotify-circular,Helvetica,Arial,sans-serif;
+    color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #1ed760;
+}
+
+nav {
+    height: 80px;
+    background-color: black;
+
+    display: flex; /* 기본은 가로 모양 */
+    justify-content: space-around; /* 가로 모양, 가로 이동 */
+    align-items: center; /* 가로 모양, 세로 이동 */
+}
+
+.nav-item {
+    padding: 28px 17px;
+    font-weight: 700;
+}
+
+
+/* 
+큰 구조 : flexbox로 움직이기
+세부 조정 : positioin이나 margin으로 움직이기
+*/
+main {
+    height: 969px;
+    background-color: rgb(41, 65, 171);
+
+    background-image: url(https://www-growth.scdn.co/static/home/bursts.svg);
+    background-size: 175%; /* 배경 이미지 사이즈 조절 */
+    background-position: 46% 4%; /* 배경 이미지 위치 조절 */
+
+    display: flex; /* main-container를 조정할 권한 부여 */
+    justify-content: center; /* main-container를 가로모양, 가로이동 */
+    align-items: center; /* main-container를 가로모양, 세로이동 */
+}
+
+.main-container{
+    /* border: 1px solid red; 참고용 */
+}
+
+.headline {
+    font-size: 120px;
+    font-weight: 900;
+    color: #1ed760;
+
+    position: relative; /* 있던 위치를 기준으로 움직임 */
+    left: 225px; /* 글씨 크기를 기준으로 하는 단위 (반응형 웹 만들 때 좋음) */
+
+    padding-bottom: 40px; /* 아래쪽 여백 주기 */
+}
+
+.headline-first {
+    position: relative; /* 있던 위치를 기준으로 움직임 */
+    left: -2.5em; /* 글씨 크기를 기준으로 하는 단위 (반응형 웹 만들 때 좋음) */
+}
+
+.sub-headline {
+    /* border: 1px solid purple; 참고용 */
+    
+    color: #1ed760;
+    text-align: center; /* 텍스트 정렬 */
+    font-size: 18px;
+
+    padding-bottom: 40px; /* 아래쪽 여백 주기 */
+}
+
+.button-area {
+    text-align: center; /* 텍스트 정렬 */
+}
+
+.button-style {
+    padding: 14px 32px; /* 버튼 부피 키우기 */
+    
+    background-color: #1ed760;
+    border-radius: 500px;
+
+    font-size: inherit;
+    color: #2941ab;
+    font-weight: 700;
+    
+    border: none;
+}
+
+.button-style:hover {
+    transform: scale(1.1); /* hover 시 변형 주기(1.1배 확대) */
+}
+
+
+footer {
+    height: 530px;
+    background-color: black;
+
+    display: flex; /* footer-container를 조정할 권한 부여 */
+    justify-content: center; /* footer-container를 가로모양, 가로이동 */
+}
+
+.footer-container {
+    /* border: 1px solid red; 참고용 */
+    max-width: 1170px; /* 요소들이 늘어나도 박스 크기 고정되도록 */
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+
+/* 메뉴파트 시작 */
+.footer-menu {
+    display: flex; /* first-box, second-box를 조정할 권한 부여 */
+    justify-content: space-between; /* 두 박스의 위치 조정 */
+    height: 346px;
+}
+
+.first-box {
+    width: 60%; /* 메뉴파트 안에서 60% 비율 */
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-box {
+    width: 40%; /* 메뉴파트 안에서 40% 비율 */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* 첫번째 메뉴박스에 들어간 스타일 */
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.sub-title {
+    color: #919496;
+    font-weight: 900;
+    margin: 20px 0px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+
+.sub-title {
+    color: #919496;
+    font-weight: 900;
+    margin: 20px 0px;
+}
+
+.footer-menu-item {
+    padding-bottom: 15px;
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+/* 두번째 아이콘 박스에 들어간 스타일 */
+.icon-box {
+    width: 54px;
+    height: 54px;
+    background-color: #222322;
+    border-radius: 50%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    font-size: 24px;
+}
+
+.icon:hover {
+    color: #2de26d;
+}
+/* 메뉴파트 끝 */
+
+
+/* 국가파트 시작 */
+.first-line {
+    color: #919496;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+}
+/* 국가파트 끝 */
+
+
+/* 하단 메뉴파트 시작 */
+.second-line {
+    color: #919496;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.second-line-item {
+    margin-right: 24px;
+    color: #919496;
+}
+/* 하단 메뉴파트 끝 */
